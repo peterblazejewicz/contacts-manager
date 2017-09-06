@@ -4,7 +4,8 @@
     "description": "Contacts Manager app by Todd Motto with Webpack, TS support, BS4, angular-translate to support your migration",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "serve:dev": "webpack-dev-server",
+        "start": "npm run serve:dev"
     },
     "repository": {
         "type": "git",
