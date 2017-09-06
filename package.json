@@ -1,20 +1,66 @@
 {
-  "name": "contacts-manager",
-  "version": "1.0.0",
-  "description": "Contacts Manager app by Todd Motto with Webpack, TS support, BS4, angular-translate to support your migration",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/peterblazejewicz/contacts-manager.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/peterblazejewicz/contacts-manager/issues"
-  },
-  "homepage": "https://github.com/peterblazejewicz/contacts-manager#readme"
+    "name": "contacts-manager",
+    "version": "1.0.0",
+    "description": "Contacts Manager app by Todd Motto with Webpack, TS support, BS4, angular-translate to support your migration",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/peterblazejewicz/contacts-manager.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/peterblazejewicz/contacts-manager/issues"
+    },
+    "homepage": "https://github.com/peterblazejewicz/contacts-manager#readme",
+    "dependencies": {
+        "@uirouter/angularjs": "1.0.3",
+        "angular": "^1.6.5",
+        "angular-translate": "^2.15.2",
+        "bootstrap": "^4.0.0-beta",
+        "font-awesome": "^4.7.0"
+    },
+    "devDependencies": {
+        "@types/angular": "^1.6.28",
+        "@types/angular-mocks": "^1.5.10",
+        "@types/angular-translate": "^2.15.1",
+        "@types/angular-ui-router": "^1.1.37",
+        "@types/core-js": "^0.9.41",
+        "@types/jasmine": "^2.5.47",
+        "@types/node": "^7.0.14",
+        "@types/webpack-env": "^1.13.0",
+        "angular-mocks": "^1.6.4",
+        "awesome-typescript-loader": "^3.2.2",
+        "core-js": "^2.4.1",
+        "coveralls": "^2.13.1",
+        "css-loader": "^0.28.4",
+        "extract-text-webpack-plugin": "^3.0.0",
+        "file-loader": "^0.11.2",
+        "html-loader": "^0.5.0",
+        "html-webpack-plugin": "^2.30.1",
+        "http-server": "^0.10.0",
+        "istanbul-instrumenter-loader": "^3.0.0",
+        "jasmine-core": "^2.7.0",
+        "karma": "^1.7.0",
+        "karma-chrome-launcher": "^2.0.0",
+        "karma-coverage": "^1.1.1",
+        "karma-jasmine": "^1.1.0",
+        "karma-phantomjs-launcher": "^1.0.4",
+        "karma-webpack": "^2.0.4",
+        "ng-annotate-loader": "^0.6.1",
+        "node-sass": "^4.5.3",
+        "remap-istanbul": "^0.9.5",
+        "sass-loader": "^6.0.6",
+        "style-loader": "^0.18.2",
+        "tslint": "^5.5.0",
+        "tslint-loader": "^3.5.3",
+        "typescript": "^2.4.2",
+        "uglifyjs-webpack-plugin": "^1.0.0-beta.2",
+        "webpack": "^3.4.1",
+        "webpack-dev-server": "^2.6.1"
+    }
 }
