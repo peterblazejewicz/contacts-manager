@@ -1,0 +1,20 @@
+{
+  "name": "contacts-manager",
+  "version": "1.0.0",
+  "description": "Contacts Manager app by Todd Motto with Webpack, TS support, BS4, angular-translate to support your migration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterblazejewicz/contacts-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterblazejewicz/contacts-manager/issues"
+  },
+  "homepage": "https://github.com/peterblazejewicz/contacts-manager#readme"
+}
