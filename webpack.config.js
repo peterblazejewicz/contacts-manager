@@ -63,6 +63,10 @@ module.exports = {
                     typeCheck: true
                 }
             }
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'vendor.bundle.js'
         })
     ],
 
@@ -74,7 +78,10 @@ module.exports = {
         port: 9000
     },
 
-    entry: './index.ts',
+    entry: {
+        app: './index.ts',
+        vendor: './vendors.ts'
+    },
     output: {
         path: DESTINATION,
         filename: 'index.js'
