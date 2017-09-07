@@ -1,0 +1,13 @@
+root {
+    display: block;
+
+    .loader {
+        display: block;
+        font-size: 24px;
+        font-weight: 900;
+        left: 45%;
+        position: absolute;
+        text-align: center;
+        top: 40%;
+    }
+}
