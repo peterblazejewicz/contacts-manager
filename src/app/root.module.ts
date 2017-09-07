@@ -1,4 +1,5 @@
 import * as angular from 'angular';
+import { common } from './common/common.module';
 import { Root } from './root.component';
 
 /**
@@ -6,7 +7,7 @@ import { Root } from './root.component';
  */
 
 export const root = angular
-    .module('root', ['ui.router'])
+    .module('root', ['ui.router', common])
     .component('root', new Root())
     .config(
         (
