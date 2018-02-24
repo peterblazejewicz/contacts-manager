@@ -4,11 +4,12 @@
     "description": "Contacts Manager app by Todd Motto with Webpack, TS support, BS4, angular-translate to support your migration",
     "scripts": {
         "build:ts": "tsc",
-        "postinstall": "npm-run-all clean copy",
         "clean:vendor": "rimraf src/vendor",
         "clean": "npm-run-all clean:*",
+        "copy:vendor": "vendor-copy",
         "copy": "npm-run-all copy:*",
-        "copy:vendor": "vendor-copy"
+        "postinstall": "npm-run-all clean copy",
+        "start": "serve --single src/"
     },
     "repository": {
         "type": "git",
@@ -64,6 +65,7 @@
         "remap-istanbul": "^0.9.5",
         "rimraf": "^2.6.2",
         "sass-lint": "^1.11.1",
+        "serve": "^6.4.11",
         "tslint": "^5.5.0",
         "typescript": "^2.7.2",
         "vendor-copy": "^1.3.1"
