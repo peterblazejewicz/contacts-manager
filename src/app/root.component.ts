@@ -1,5 +1,7 @@
-import './root.scss';
+(angular => {
+    class Root implements angular.IComponentOptions {
+        template: string = require('./root.html');
+    }
 
-export class Root implements angular.IComponentOptions {
-    template: string = require('./root.html');
-}
+    angular.module('root').component('root', new Root());
+})(angular);

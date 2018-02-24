@@ -1,38 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="contacts.manager">
 
-<head>
+<!doctype html>
+<html ng-app="root" ng-strict-di>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>
-        <%= htmlWebpackPlugin.options.title %>
-    </title>
-    <base href="/">
+    <title>Contacts Manager</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <style>
-        html,
-        body {
-            background-color: rebeccapurple;
-        }
-
-        body {
-            min-height: 100vh;
-            transition: background-color 1s, color 1s;
-        }
-
-        body[ng-cloak] {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rebeccapurple;
-            color: white;
-        }
-
-    </style>
-</head>
-
-<body ng-cloak>
-    <root>Loading</root>
-</body>
-
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <root>
+      <span class="loader">Loading...</span>
+    </root>
+    <script src="js/vendor.js"></script>
+    <script src="js/bundle.js"></script>
+  </body>
 </html>
