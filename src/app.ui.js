@@ -1,10 +1,11 @@
+"use strict";
 (function (angular) {
     angular.module('root', ['ui.router']);
 })(angular);
 (function (angular) {
-    angular
-        .module('root')
-        .config(function ($locationProvider, $urlRouterProvider) {
+    angular.module('root').config(function ($locationProvider, //angular.ILocationProvider,
+    $urlRouterProvider //angular.ui.IUrlRouterProvider
+    ) {
         'ngInject';
         $locationProvider.html5Mode(true);
     });

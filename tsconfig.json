@@ -16,8 +16,8 @@
     },
     "exclude": ["node_modules", "src/app.ui.js"],
     "files": [
-        "src/app/root.module.ts",
-        "src/app/root.config.ts",
+        "src/app/root.module.js",
+        "src/app/root.config.js",
         "src/app/root.component.ts",
         "src/app.ts"
     ]
