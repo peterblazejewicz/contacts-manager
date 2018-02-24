@@ -72,6 +72,10 @@
     },
     "vendorCopy": [
         {
+            "from": "node_modules/angular/angular.js",
+            "to": "src/vendor/angular/angular.js"
+        },
+        {
             "from": "node_modules/bootstrap/dist/css/bootstrap.css",
             "to": "src/vendor/bootstrap/bootstrap.css"
         },
