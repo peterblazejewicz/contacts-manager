@@ -3,7 +3,12 @@
     "version": "1.0.0",
     "description": "Contacts Manager app by Todd Motto with Webpack, TS support, BS4, angular-translate to support your migration",
     "scripts": {
-        "build:ts": "tsc"
+        "build:ts": "tsc",
+        "postinstall": "npm-run-all clean copy",
+        "clean:vendor": "rimraf src/vendor",
+        "clean": "npm-run-all clean:*",
+        "copy": "npm-run-all copy:*",
+        "copy:vendor": "vendor-copy"
     },
     "repository": {
         "type": "git",
@@ -17,11 +22,18 @@
     },
     "homepage": "https://github.com/peterblazejewicz/contacts-manager#readme",
     "dependencies": {
-        "@uirouter/angularjs": "1.0.3",
+        "@fortawesome/fontawesome": "^1.1.3",
+        "@fortawesome/fontawesome-free-brands": "^5.0.6",
+        "@fortawesome/fontawesome-free-regular": "^5.0.6",
+        "@fortawesome/fontawesome-free-solid": "^5.0.6",
+        "@uirouter/angularjs": "^1.0.3",
         "angular": "1.5.9",
         "angular-loading-bar": "^0.9.0",
+        "angular-messages": "^1.6.9",
         "angular-translate": "^2.15.2",
+        "angularfire": "^2.3.0",
         "bootstrap": "^4.0.0",
+        "firebase": "^4.10.1",
         "font-awesome": "^4.7.0"
     },
     "devDependencies": {
@@ -30,9 +42,11 @@
         "@types/angular-mocks": "^1.5.10",
         "@types/angular-translate": "^2.15.1",
         "@types/angular-ui-router": "^1.1.37",
+        "@types/angularfire": "^0.8.33",
         "@types/core-js": "^0.9.41",
         "@types/jasmine": "^2.5.47",
         "@types/node": "^7.0.14",
+        "@types/rimraf": "^2.0.2",
         "@types/webpack-env": "^1.13.0",
         "angular-mocks": "^1.6.4",
         "core-js": "^2.4.1",
@@ -46,9 +60,58 @@
         "karma-phantomjs-launcher": "^1.0.4",
         "ng-annotate-loader": "^0.6.1",
         "node-sass": "^4.5.3",
+        "npm-run-all": "^4.1.2",
         "remap-istanbul": "^0.9.5",
+        "rimraf": "^2.6.2",
         "sass-lint": "^1.11.1",
         "tslint": "^5.5.0",
-        "typescript": "^2.7.2"
-    }
+        "typescript": "^2.7.2",
+        "vendor-copy": "^1.3.1"
+    },
+    "vendorCopy": [
+        {
+            "from": "node_modules/bootstrap/dist/css/bootstrap.css",
+            "to": "src/vendor/bootstrap/bootstrap.css"
+        },
+        {
+            "from": "node_modules/@fortawesome/fontawesome/index.js",
+            "to": "src/vendor/fontawesome/index.js"
+        },
+        {
+            "from": "node_modules/@fortawesome/fontawesome-free-brands/index.js",
+            "to": "src/vendor/fontawesome/free-brands.js"
+        },
+        {
+            "from": "node_modules/@fortawesome/fontawesome-free-regular/index.js",
+            "to": "src/vendor/fontawesome/free-regular.js"
+        },
+        {
+            "from": "node_modules/@fortawesome/fontawesome-free-solid/index.js",
+            "to": "src/vendor/fontawesome/free-solid.js"
+        },
+        {
+            "from": "node_modules/firebase/firebase.js",
+            "to": "src/vendor/firebase/firebase.js"
+        },
+        {
+            "from": "node_modules/angularfire/dist/angularfire.js",
+            "to": "src/vendor/angularfire/angularfire.js"
+        },
+        {
+            "from": "node_modules/angular-messages/angular-messages.js",
+            "to": "src/vendor/angular-messages/angular-messages.js"
+        },
+        {
+            "from": "node_modules/angular-translate/dist/angular-translate.js",
+            "to": "src/vendor/angular-translate/angular-translate.js"
+        },
+        {
+            "from": "node_modules/angular-loading-bar/build/loading-bar.js",
+            "to": "src/vendor/angular-loading-bar/loading-bar.js"
+        },
+        {
+            "from": "node_modules/angular-loading-bar/build/loading-bar.css",
+            "to": "src/vendor/angular-loading-bar/loading-bar.css"
+        }
+    ]
 }
