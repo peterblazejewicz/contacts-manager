@@ -1,8 +1,24 @@
 {
     "compilerOptions": {
-        "sourceMap": true,
+        "alwaysStrict": true,
+        "pretty": true,
+        "target": "es5",
+        "module": "none",
+        "allowJs": true,
+        "checkJs": false,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "lib": ["esnext", "dom"],
         "noImplicitAny": true,
         "skipLibCheck": true,
-        "lib": ["es6", "dom"]
-    }
+        "sourceMap": true,
+        "outFile": "src/app.ui.js"
+    },
+    "exclude": ["node_modules", "src/app.ui.js"],
+    "files": [
+        "src/app/root.module.ts",
+        "src/app/root.config.ts",
+        "src/app/root.component.ts",
+        "src/app.ts"
+    ]
 }

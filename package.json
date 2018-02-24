@@ -2,8 +2,9 @@
     "name": "contacts-manager",
     "version": "1.0.0",
     "description": "Contacts Manager app by Todd Motto with Webpack, TS support, BS4, angular-translate to support your migration",
-    "main": "index.js",
-    "scripts": {},
+    "scripts": {
+        "build:ts": "tsc"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/peterblazejewicz/contacts-manager.git"
@@ -17,14 +18,14 @@
     "homepage": "https://github.com/peterblazejewicz/contacts-manager#readme",
     "dependencies": {
         "@uirouter/angularjs": "1.0.3",
-        "angular": "^1.6.5",
+        "angular": "1.5.9",
         "angular-loading-bar": "^0.9.0",
         "angular-translate": "^2.15.2",
         "bootstrap": "^4.0.0",
         "font-awesome": "^4.7.0"
     },
     "devDependencies": {
-        "@types/angular": "^1.6.28",
+        "@types/angular": "^1.5.9",
         "@types/angular-loading-bar": "0.0.32",
         "@types/angular-mocks": "^1.5.10",
         "@types/angular-translate": "^2.15.1",
@@ -36,7 +37,6 @@
         "angular-mocks": "^1.6.4",
         "core-js": "^2.4.1",
         "coveralls": "^2.13.1",
-        "css-loader": "^0.28.4",
         "http-server": "^0.10.0",
         "jasmine-core": "^2.7.0",
         "karma": "^1.7.0",
@@ -49,6 +49,6 @@
         "remap-istanbul": "^0.9.5",
         "sass-lint": "^1.11.1",
         "tslint": "^5.5.0",
-        "typescript": "^2.4.2"
+        "typescript": "^2.7.2"
     }
 }
