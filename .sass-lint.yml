@@ -1,7 +1,0 @@
-# rule overrides
-rules:
-    no-css-comments: 0
-    indentation:
-        - 4
-        -
-            size: 4
