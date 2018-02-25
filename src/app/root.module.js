@@ -1,3 +1,3 @@
 (angular => {
-    angular.module('root', ['ui.router']);
+    angular.module('root', ['common']);
 })(angular);

@@ -1,6 +1,6 @@
 (angular => {
     class Root implements angular.IComponentOptions {
-        template: string = require('./root.html');
+        templateUrl: string = './app/root.template.html';
     }
 
     angular.module('root').component('root', new Root());

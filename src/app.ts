@@ -1,1 +1,3 @@
-const bootstrapModuleName = angular.module('contacts.manager', ['root']).name;
+(angular => {
+    angular.module('contacts.manager', ['root']);
+})(angular);
