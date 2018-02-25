@@ -1,11 +1,12 @@
 <!doctype html>
-<html ng-app="contacts.manager" ng-strict-di>
+<html ng-app="root">
+<!-- <html ng-app="root" ng-strict-di> -->
 
 <head>
     <meta charset="utf-8">
     <title>Contacts Manager</title>
     <base href="/">
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
     <script>
         FontAwesomeConfig = { searchPseudoElements: true };
@@ -29,7 +30,46 @@
     <script src="vendor/fontawesome/free-regular.js"></script>
     <script src="vendor/fontawesome/free-solid.js"></script>
 
-    <script src="app.ui.js"></script>
+    <!-- <script src="app.ui.js"></script> -->
+    <script src="app/components/auth/auth.module.js"></script>
+    <script src="app/components/auth/auth.service.js"></script>
+    <script src="app/components/auth/login/login.component.js"></script>
+    <script src="app/components/auth/login/login.controller.js"></script>
+    <script src="app/components/auth/register/register.component.js"></script>
+    <script src="app/components/auth/register/register.controller.js"></script>
+    <script src="app/components/auth/auth-form/auth-form.component.js"></script>
+    <script src="app/components/auth/auth-form/auth-form.controller.js"></script>
+
+    <script src="app/components/contact/contact.module.js"></script>
+    <script src="app/components/contact/contact.service.js"></script>
+    <script src="app/components/contact/contact/contact.component.js"></script>
+    <script src="app/components/contact/contact/contact.controller.js"></script>
+    <script src="app/components/contact/contact-detail/contact-detail.component.js"></script>
+    <script src="app/components/contact/contact-detail/contact-detail.controller.js"></script>
+    <script src="app/components/contact/contact-edit/contact-edit.component.js"></script>
+    <script src="app/components/contact/contact-edit/contact-edit.controller.js"></script>
+    <script src="app/components/contact/contact-new/contact-new.component.js"></script>
+    <script src="app/components/contact/contact-new/contact-new.controller.js"></script>
+    <script src="app/components/contact/contact-tag/contact-tag.component.js"></script>
+    <script src="app/components/contact/contact-tag/contact-tag.controller.js"></script>
+    <script src="app/components/contact/contacts/contacts.component.js"></script>
+    <script src="app/components/contact/contacts/contacts.controller.js"></script>
+    <script src="app/components/contact/contacts/contacts.filter.js"></script>
+    <script src="app/components/contact/length-check/length-check.directive.js"></script>
+
+
+    <script src="app/components/components.module.js"></script>
+
+
+
+    <script src="app/common/app.module.js"></script>
+    <script src="app/common/app-nav.component.js"></script>
+    <script src="app/common/app-sidebar.component.js"></script>
+    <script src="app/common/app.component.js"></script>
+    <script src="app/common/app.controller.js"></script>
+
+    <script src="app/templates/templates.module.js"></script>
+    <script src="app/root.module.js"></script>
 </body>
 
 </html>
