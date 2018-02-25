@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Contacts Manager app by Todd Motto with Webpack, TS support, BS4, angular-translate to support your migration",
     "scripts": {
+        "build": "npm-run-all build:*",
         "build:ts": "tsc",
         "clean:vendor": "rimraf src/vendor",
         "clean": "npm-run-all clean:*",
@@ -74,6 +75,10 @@
         {
             "from": "node_modules/angular/angular.js",
             "to": "src/vendor/angular/angular.js"
+        },
+        {
+            "from": "node_modules/@uirouter/angularjs/release/angular-ui-router.js",
+            "to": "src/vendor/angular/angular-ui-router.js"
         },
         {
             "from": "node_modules/bootstrap/dist/css/bootstrap.css",

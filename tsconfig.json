@@ -16,9 +16,11 @@
     },
     "exclude": ["node_modules", "src/app.ui.js"],
     "files": [
+        "src/app/common/app.module.ts",
+        "src/app/common/app.component.js",
+        "src/app/common/app.controller.ts",
         "src/app/root.module.js",
-        "src/app/root.config.js",
         "src/app/root.component.ts",
-        "src/app.ts"
+        "src/app.ts",
     ]
 }
