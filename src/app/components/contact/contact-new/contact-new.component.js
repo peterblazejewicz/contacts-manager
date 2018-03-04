@@ -9,11 +9,14 @@
     angular
         .module('components.contact')
         .component('contactNew', contactNew)
-        .config(function($stateProvider) {
-            $stateProvider.state('new', {
-                parent: 'app',
-                url: '/new',
-                component: 'contactNew'
-            });
-        });
+        .config([
+            '$stateProvider',
+            function($stateProvider) {
+                $stateProvider.state('new', {
+                    parent: 'app',
+                    url: '/new',
+                    component: 'contactNew'
+                });
+            }
+        ]);
 })(angular);

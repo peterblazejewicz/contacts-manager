@@ -18,6 +18,8 @@
         };
     }
 
+    AppController.$inject = ['AuthService', '$state'];
+
     /**
      * @ngdoc type
      * @module common

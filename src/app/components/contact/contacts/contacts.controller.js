@@ -18,6 +18,8 @@
         };
     }
 
+    ContactsController.$inject = ['$filter', '$state'];
+
     angular
         .module('components.contact')
         .controller('ContactsController', ContactsController);

@@ -13,24 +13,33 @@
     angular
         .module('components.contact')
         .component('contacts', contacts)
-        .config(function($stateProvider) {
-            $stateProvider.state('contacts', {
-                parent: 'app',
-                url: '/contacts?filter',
-                component: 'contacts',
-                params: {
-                    filter: {
-                        value: 'none'
-                    }
-                },
-                resolve: {
-                    contacts: function(ContactService) {
-                        return ContactService.getContactList().$loaded();
+        .config([
+            '$stateProvider',
+            function($stateProvider) {
+                $stateProvider.state('contacts', {
+                    parent: 'app',
+                    url: '/contacts?filter',
+                    component: 'contacts',
+                    params: {
+                        filter: {
+                            value: 'none'
+                        }
                     },
-                    filter: function($transition$) {
-                        return $transition$.params();
+                    resolve: {
+                        contacts: [
+                            'ContactService',
+                            function(ContactService) {
+                                return ContactService.getContactList().$loaded();
+                            }
+                        ],
+                        filter: [
+                            '$transition$',
+                            function($transition$) {
+                                return $transition$.params();
+                            }
+                        ]
                     }
-                }
-            });
-        });
+                });
+            }
+        ]);
 })(angular);

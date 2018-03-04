@@ -29,6 +29,8 @@
         };
     }
 
+    ContactNewController.$inject = ['ContactService', '$state'];
+
     angular
         .module('components.contact')
         .controller('ContactNewController', ContactNewController);

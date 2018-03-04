@@ -22,6 +22,8 @@
         };
     }
 
+    LoginController.$inject = ['AuthService', '$state'];
+
     angular
         .module('components.auth')
         .controller('LoginController', LoginController);

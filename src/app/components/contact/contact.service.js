@@ -28,6 +28,13 @@
         };
     }
 
+    ContactService.$inject = [
+        'AuthService',
+        '$firebaseRef',
+        '$firebaseArray',
+        '$firebaseObject'
+    ];
+
     /**
      * @ngdoc service
      * @name ContactService

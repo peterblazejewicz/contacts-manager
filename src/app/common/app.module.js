@@ -14,10 +14,12 @@
      * This is the common module. It includes a run method that setups the loading bar.
      *
      **/
-    angular
-        .module('common', ['ui.router', 'angular-loading-bar'])
-        .run(function($transitions, cfpLoadingBar) {
+    angular.module('common', ['ui.router', 'angular-loading-bar']).run([
+        '$transitions',
+        'cfpLoadingBar',
+        function($transitions, cfpLoadingBar) {
             $transitions.onStart({}, cfpLoadingBar.start);
             $transitions.onSuccess({}, cfpLoadingBar.complete);
-        });
+        }
+    ]);
 })(angular);

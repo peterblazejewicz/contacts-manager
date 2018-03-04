@@ -12,17 +12,26 @@
     angular
         .module('components.contact')
         .component('contactEdit', contactEdit)
-        .config(function($stateProvider) {
-            $stateProvider.state('contact', {
-                parent: 'app',
-                url: '/contact/:id',
-                component: 'contactEdit',
-                resolve: {
-                    contact: function($transition$, ContactService) {
-                        var key = $transition$.params().id;
-                        return ContactService.getContactById(key).$loaded();
+        .config([
+            '$stateProvider',
+            function($stateProvider) {
+                $stateProvider.state('contact', {
+                    parent: 'app',
+                    url: '/contact/:id',
+                    component: 'contactEdit',
+                    resolve: {
+                        contact: [
+                            '$transition$',
+                            'ContactService',
+                            function($transition$, ContactService) {
+                                var key = $transition$.params().id;
+                                return ContactService.getContactById(
+                                    key
+                                ).$loaded();
+                            }
+                        ]
                     }
-                }
-            });
-        });
+                });
+            }
+        ]);
 })(angular);

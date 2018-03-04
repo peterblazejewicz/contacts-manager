@@ -41,6 +41,8 @@
         };
     }
 
+    AuthService.$inject = ['$firebaseAuth'];
+
     /**
      * @ngdoc service
      * @name AuthService

@@ -44,6 +44,13 @@
         };
     }
 
+    ContactEditController.$inject = [
+        '$state',
+        'ContactService',
+        'cfpLoadingBar',
+        '$window'
+    ];
+
     /**
      * @ngdoc type
      * @module components.contact

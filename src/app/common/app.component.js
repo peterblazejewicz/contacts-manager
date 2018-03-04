@@ -25,14 +25,17 @@
     angular
         .module('common')
         .component('app', app)
-        .config(function($stateProvider) {
-            $stateProvider.state('app', {
-                redirectTo: 'contacts',
-                url: '/app',
-                data: {
-                    requiredAuth: true
-                },
-                component: 'app'
-            });
-        });
+        .config([
+            '$stateProvider',
+            function($stateProvider) {
+                $stateProvider.state('app', {
+                    redirectTo: 'contacts',
+                    url: '/app',
+                    data: {
+                        requiredAuth: true
+                    },
+                    component: 'app'
+                });
+            }
+        ]);
 })(angular);
