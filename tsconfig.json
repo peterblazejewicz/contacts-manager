@@ -12,22 +12,8 @@
         "noImplicitAny": true,
         "skipLibCheck": true,
         "sourceMap": true,
-        "outFile": "src/app.ui.js"
+        "outFile": "src/js/bundle.js"
     },
-    "exclude": ["node_modules", "src/app.ui.js"],
-    "files": [
-        "src/app/components/auth/auth.module.js",
-        "src/app/components/auth/auth.service.js",
-        "src/app/components/contact/contact.module.js",
-        "src/app/components/contact/contact.service.js",
-        "src/app/components/components.module.js",
-        "src/app/common/app.module.js",
-        "src/app/common/app.component.js",
-        "src/app/common/app.controller.js",
-        "src/app/common/app-nav.component.js",
-        "src/app/common/app-sidebar.component.js",
-        "src/app/common/app-sidebar.controller.js",
-        "src/app/root.module.js",
-        "src/app/root.component.js",
-    ]
+    "exclude": ["node_modules", "src/app/**/*.spec.js"],
+    "include": ["src/app/**/*.module.js", "src/app/**/*.js", "./templates.js"]
 }
