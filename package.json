@@ -18,12 +18,12 @@
         "clean": "npm-run-all clean:*",
         "minify:vendorjs": "uglifyjs src/js/vendor.js -o src/js/vendor.min.js",
         "start": "serve --single src/",
-        "start:public": "serve --single public/",
+        "start:firebase": "firebase serve",
         "test": "karma start",
         "copy:templates": "cpx \"src/**/*.html\" \"public\"",
         "copy:assets": "cpx \"src/**/*.{css,map,eot,ttf,woff,woff2,ico,png}\" \"public\"",
         "copy:js": "cpx \"src/js/**/**\" \"public/js/\"",
-        "deploy": "npm-run-all --sequential copy:* deploy:*",
+        "deploy": "npm-run-all --sequential copy:*",
         "deploy:firebase": "firebase deploy"
     },
     "repository": {
