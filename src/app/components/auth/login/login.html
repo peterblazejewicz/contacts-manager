@@ -1,10 +1,6 @@
 <div class="auth">
   <h1>Login</h1>
-  <auth-form
-    user="$ctrl.user"
-    message="{{ $ctrl.error }}"
-    button="Login"
-    on-submit="$ctrl.loginUser($event);">
+  <auth-form user="$ctrl.user" message="{{ $ctrl.error }}" button="Login" on-submit="$ctrl.loginUser($event);">
   </auth-form>
 </div>
 <div class="auth__info">

@@ -1,44 +1,43 @@
-function MockFirebase () {}
-MockFirebase.prototype.initializeApp = function () {};
+function MockFirebase() {}
+MockFirebase.prototype.initializeApp = function() {};
 window.firebase = new MockFirebase();
 
 angular
   .module('firebase', [])
-  .provider('$firebaseRef', function () {
-    this.registerUrl = function (urls) {
+  .provider('$firebaseRef', function() {
+    this.registerUrl = function(urls) {
       for (var key in urls) {
         this[key] = urls[key];
       }
     };
-    this.$get = function () {
+    this.$get = function() {
       return angular.noop;
     };
   })
-  .factory('$firebaseArray', function ($q) {
+  .factory('$firebaseArray', function($q) {
     function FirebaseArray(ref) {}
 
     FirebaseArray.prototype = {
       constructor: FirebaseArray,
-      $add: function (newData) {
+      $add: function(newData) {
         return $q.resolve({ key: 1 });
-      }
+      },
     };
 
-    return function () {
+    return function() {
       return new FirebaseArray();
     };
   })
-  .factory('$firebaseObject', function ($q) {
+  .factory('$firebaseObject', function($q) {
     function FirebaseObject() {
       return $q.when({ key: 1 });
     }
 
-    return function () {
+    return function() {
       return new FirebaseObject();
     };
   })
-  .factory('$firebaseAuth', function ($q) {
-
+  .factory('$firebaseAuth', function($q) {
     var fakeUser = { $id: 1 };
 
     function FirebaseAuth() {
@@ -47,29 +46,29 @@ angular
 
     FirebaseAuth.prototype = {
       constructor: FirebaseAuth,
-      $requireSignIn: function () {
+      $requireSignIn: function() {
         this.auth = fakeUser;
         return $q.resolve(this.auth);
       },
-      $signInWithEmailAndPassword: function (email, password) {
+      $signInWithEmailAndPassword: function(email, password) {
         this.auth = fakeUser;
         return $q.resolve(this.auth);
       },
-      $createUserWithEmailAndPassword: function () {
+      $createUserWithEmailAndPassword: function() {
         this.auth = fakeUser;
         return $q.resolve(this.auth);
       },
-      $waitForSignIn: function () {
+      $waitForSignIn: function() {
         this.auth = fakeUser;
         return $q.resolve(this.auth);
       },
-      $signOut: function () {
+      $signOut: function() {
         this.auth = null;
         return $q.resolve(this.auth);
-      }
+      },
     };
 
-    return function () {
+    return function() {
       return new FirebaseAuth();
     };
   });

@@ -1,16 +1,16 @@
 (function(angular) {
-    'use strict';
+  'use strict';
 
-    var authForm = {
-        bindings: {
-            user: '<',
-            button: '@',
-            message: '@',
-            onSubmit: '&'
-        },
-        templateUrl: './auth-form.html',
-        controller: 'AuthFormController'
-    };
+  var authForm = {
+    bindings: {
+      user: '<',
+      button: '@',
+      message: '@',
+      onSubmit: '&',
+    },
+    templateUrl: './auth-form.html',
+    controller: 'AuthFormController',
+  };
 
-    angular.module('components.auth').component('authForm', authForm);
+  angular.module('components.auth').component('authForm', authForm);
 })(angular);

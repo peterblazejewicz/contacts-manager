@@ -1,22 +1,22 @@
 (function(angular) {
-    'use strict';
+  'use strict';
 
-    var contactNew = {
-        templateUrl: './contact-new.html',
-        controller: 'ContactNewController'
-    };
+  var contactNew = {
+    templateUrl: './contact-new.html',
+    controller: 'ContactNewController',
+  };
 
-    angular
-        .module('components.contact')
-        .component('contactNew', contactNew)
-        .config([
-            '$stateProvider',
-            function($stateProvider) {
-                $stateProvider.state('new', {
-                    parent: 'app',
-                    url: '/new',
-                    component: 'contactNew'
-                });
-            }
-        ]);
+  angular
+    .module('components.contact')
+    .component('contactNew', contactNew)
+    .config([
+      '$stateProvider',
+      function($stateProvider) {
+        $stateProvider.state('new', {
+          parent: 'app',
+          url: '/new',
+          component: 'contactNew',
+        });
+      },
+    ]);
 })(angular);

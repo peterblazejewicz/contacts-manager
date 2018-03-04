@@ -1,7 +1,7 @@
-describe('Contact', function () {
+describe('Contact', function() {
   beforeEach(module('components.contact'));
 
-  describe('ContactDetailController', function () {
+  describe('ContactDetailController', function() {
     var $componentController,
       controller,
       mockContact = { $id: 1 },
@@ -9,15 +9,23 @@ describe('Contact', function () {
       mockUpdate = angular.noop,
       mockDelete = angular.noop;
 
-    beforeEach(inject(function ($injector) {
-      $componentController = $injector.get('$componentController');
-      controller = $componentController('contactDetail',
-        { $scope: {} },
-        { contact: mockContact, onSave: mockSave, onUpdate: mockUpdate, onDelete: mockDelete }
-      );
-    }));
+    beforeEach(
+      inject(function($injector) {
+        $componentController = $injector.get('$componentController');
+        controller = $componentController(
+          'contactDetail',
+          { $scope: {} },
+          {
+            contact: mockContact,
+            onSave: mockSave,
+            onUpdate: mockUpdate,
+            onDelete: mockDelete,
+          },
+        );
+      }),
+    );
 
-    it('should bind to the correct contact', function () {
+    it('should bind to the correct contact', function() {
       expect(controller.contact.$id).toEqual(mockContact.$id);
       controller.$onInit();
 
@@ -25,16 +33,22 @@ describe('Contact', function () {
     });
 
     it('should initialize isNewContact if no $id is present', function() {
-      controller = $componentController('contactDetail',
+      controller = $componentController(
+        'contactDetail',
         { $scope: {} },
-        { contact: {}, onSave: mockSave, onUpdate: mockUpdate, onDelete: mockDelete }
+        {
+          contact: {},
+          onSave: mockSave,
+          onUpdate: mockUpdate,
+          onDelete: mockDelete,
+        },
       );
       controller.$onInit();
 
       expect(controller.isNewContact).toBe(true);
     });
 
-    it('should call onSave when saveContact is called', function () {
+    it('should call onSave when saveContact is called', function() {
       var payload = { $event: { contact: mockContact } };
 
       spyOn(controller, 'onSave');
@@ -42,7 +56,7 @@ describe('Contact', function () {
       expect(controller.onSave).toHaveBeenCalledWith(payload);
     });
 
-    it('should call onUpdate when updateContact is called', function () {
+    it('should call onUpdate when updateContact is called', function() {
       var payload = { $event: { contact: mockContact } };
 
       spyOn(controller, 'onUpdate');
@@ -50,7 +64,7 @@ describe('Contact', function () {
       expect(controller.onUpdate).toHaveBeenCalledWith(payload);
     });
 
-    it('should call onDelete when deleteContact is called', function () {
+    it('should call onDelete when deleteContact is called', function() {
       var payload = { $event: { contact: mockContact } };
 
       spyOn(controller, 'onDelete');
@@ -58,7 +72,7 @@ describe('Contact', function () {
       expect(controller.onDelete).toHaveBeenCalledWith(payload);
     });
 
-    it('should save tag when tagChange is called', function () {
+    it('should save tag when tagChange is called', function() {
       var event = { tag: 'friend' };
 
       spyOn(controller, 'updateContact');

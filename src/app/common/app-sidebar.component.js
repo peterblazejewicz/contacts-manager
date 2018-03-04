@@ -1,10 +1,10 @@
 (function(angular) {
-    'use strict';
+  'use strict';
 
-    var appSidebar = {
-        templateUrl: './app-sidebar.html',
-        controller: 'AppSidebarController'
-    };
+  var appSidebar = {
+    templateUrl: './app-sidebar.html',
+    controller: 'AppSidebarController',
+  };
 
-    angular.module('common').component('appSidebar', appSidebar);
+  angular.module('common').component('appSidebar', appSidebar);
 })(angular);

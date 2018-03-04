@@ -3,10 +3,7 @@
     Tag
   </label>
   <ul>
-    <li
-      class="contact-card__pill contact-card__pill--{{ tag }}"
-      ng-repeat="tag in ::$ctrl.tags"
-      ng-class="{
+    <li class="contact-card__pill contact-card__pill--{{ tag }}" ng-repeat="tag in ::$ctrl.tags" ng-class="{
         'contact__pill--active': $ctrl.tag == tag
       }">
       <button class="button--clean" ng-click="$ctrl.updateTag(tag);">

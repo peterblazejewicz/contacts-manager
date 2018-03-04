@@ -1,37 +1,37 @@
 (function(angular) {
-    'use strict';
+  'use strict';
 
-    function ContactNewController(ContactService, $state) {
-        var ctrl = this;
-        ctrl.$onInit = function() {
-            ctrl.contact = {
-                name: '',
-                email: '',
-                job: '',
-                location: '',
-                social: {
-                    facebook: '',
-                    github: '',
-                    twitter: '',
-                    linkedin: ''
-                },
-                tag: 'none'
-            };
-        };
-        ctrl.createNewContact = function(event) {
-            return ContactService.createNewContact(event.contact).then(function(
-                contact
-            ) {
-                $state.go('contact', {
-                    id: contact.key
-                });
-            });
-        };
-    }
+  function ContactNewController(ContactService, $state) {
+    var ctrl = this;
+    ctrl.$onInit = function() {
+      ctrl.contact = {
+        name: '',
+        email: '',
+        job: '',
+        location: '',
+        social: {
+          facebook: '',
+          github: '',
+          twitter: '',
+          linkedin: '',
+        },
+        tag: 'none',
+      };
+    };
+    ctrl.createNewContact = function(event) {
+      return ContactService.createNewContact(event.contact).then(function(
+        contact,
+      ) {
+        $state.go('contact', {
+          id: contact.key,
+        });
+      });
+    };
+  }
 
-    ContactNewController.$inject = ['ContactService', '$state'];
+  ContactNewController.$inject = ['ContactService', '$state'];
 
-    angular
-        .module('components.contact')
-        .controller('ContactNewController', ContactNewController);
+  angular
+    .module('components.contact')
+    .controller('ContactNewController', ContactNewController);
 })(angular);

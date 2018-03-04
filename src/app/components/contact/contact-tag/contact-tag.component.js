@@ -1,14 +1,14 @@
 (function(angular) {
-    'use strict';
+  'use strict';
 
-    var contactTag = {
-        bindings: {
-            tag: '<',
-            onChange: '&'
-        },
-        templateUrl: './contact-tag.html',
-        controller: 'ContactTagController'
-    };
+  var contactTag = {
+    bindings: {
+      tag: '<',
+      onChange: '&',
+    },
+    templateUrl: './contact-tag.html',
+    controller: 'ContactTagController',
+  };
 
-    angular.module('components.contact').component('contactTag', contactTag);
+  angular.module('components.contact').component('contactTag', contactTag);
 })(angular);

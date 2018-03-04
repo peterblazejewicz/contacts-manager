@@ -1,20 +1,22 @@
-describe('Contact', function () {
+describe('Contact', function() {
   beforeEach(module('components.contact'));
 
-  describe('lengthCheck', function () {
-    var $rootScope,
-      $compile,
-      element;
+  describe('lengthCheck', function() {
+    var $rootScope, $compile, element;
 
-    beforeEach(inject(function ($injector) {
-      $rootScope = $injector.get('$rootScope');
-      $compile = $injector.get('$compile');
+    beforeEach(
+      inject(function($injector) {
+        $rootScope = $injector.get('$rootScope');
+        $compile = $injector.get('$compile');
 
-      $rootScope.contact = { name: '' };
-      element = angular.element('<input name="name" type="text" length-check ng-model="contact.name"></input>');
-      $compile(element)($rootScope);
-      $rootScope.$digest();
-    }));
+        $rootScope.contact = { name: '' };
+        element = angular.element(
+          '<input name="name" type="text" length-check ng-model="contact.name"></input>',
+        );
+        $compile(element)($rootScope);
+        $rootScope.$digest();
+      }),
+    );
 
     it('should contain dynamic-input class', function() {
       expect(element.hasClass('dynamic-input')).toEqual(true);

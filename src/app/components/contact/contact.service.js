@@ -1,57 +1,57 @@
 (function(angular) {
-    'use strict';
+  'use strict';
 
-    function ContactService(
-        AuthService,
-        $firebaseRef,
-        $firebaseArray,
-        $firebaseObject
-    ) {
-        var ref = $firebaseRef.contacts;
-        var uid = AuthService.getUser().uid;
-        return {
-            createNewContact: function(contact) {
-                return $firebaseArray(ref.child(uid)).$add(contact);
-            },
-            getContactById: function(id) {
-                return $firebaseObject(ref.child(uid).child(id));
-            },
-            getContactList: function() {
-                return $firebaseArray(ref.child(uid));
-            },
-            updateContact: function(contact) {
-                return contact.$save();
-            },
-            deleteContact: function(contact) {
-                return contact.$remove();
-            }
-        };
-    }
+  function ContactService(
+    AuthService,
+    $firebaseRef,
+    $firebaseArray,
+    $firebaseObject,
+  ) {
+    var ref = $firebaseRef.contacts;
+    var uid = AuthService.getUser().uid;
+    return {
+      createNewContact: function(contact) {
+        return $firebaseArray(ref.child(uid)).$add(contact);
+      },
+      getContactById: function(id) {
+        return $firebaseObject(ref.child(uid).child(id));
+      },
+      getContactList: function() {
+        return $firebaseArray(ref.child(uid));
+      },
+      updateContact: function(contact) {
+        return contact.$save();
+      },
+      deleteContact: function(contact) {
+        return contact.$remove();
+      },
+    };
+  }
 
-    ContactService.$inject = [
-        'AuthService',
-        '$firebaseRef',
-        '$firebaseArray',
-        '$firebaseObject'
-    ];
+  ContactService.$inject = [
+    'AuthService',
+    '$firebaseRef',
+    '$firebaseArray',
+    '$firebaseObject',
+  ];
 
-    /**
-     * @ngdoc service
-     * @name ContactService
-     * @module components.contact
-     *
-     * @description Provides HTTP methods for our firebase connection.
-     *
-     * ## Lorem Ipsum 1
-     * Aenean ornare odio elit, eget facilisis ipsum molestie ac. Nam bibendum a nibh ut ullamcorper.
-     * Donec non felis gravida, rutrum ante mattis, sagittis urna. Sed quam quam, facilisis vel cursus at.
-     *
-     * ## Lorem Ipsum 2
-     * Aenean ornare odio elit, eget facilisis ipsum molestie ac. Nam bibendum a nibh ut ullamcorper.
-     * Donec non felis gravida, rutrum ante mattis, sagittis urna. Sed quam quam, facilisis vel cursus at.
-     */
+  /**
+   * @ngdoc service
+   * @name ContactService
+   * @module components.contact
+   *
+   * @description Provides HTTP methods for our firebase connection.
+   *
+   * ## Lorem Ipsum 1
+   * Aenean ornare odio elit, eget facilisis ipsum molestie ac. Nam bibendum a nibh ut ullamcorper.
+   * Donec non felis gravida, rutrum ante mattis, sagittis urna. Sed quam quam, facilisis vel cursus at.
+   *
+   * ## Lorem Ipsum 2
+   * Aenean ornare odio elit, eget facilisis ipsum molestie ac. Nam bibendum a nibh ut ullamcorper.
+   * Donec non felis gravida, rutrum ante mattis, sagittis urna. Sed quam quam, facilisis vel cursus at.
+   */
 
-    angular
-        .module('components.contact')
-        .factory('ContactService', ContactService);
+  angular
+    .module('components.contact')
+    .factory('ContactService', ContactService);
 })(angular);

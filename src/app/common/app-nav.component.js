@@ -1,13 +1,13 @@
 (function(angular) {
-    'use strict';
+  'use strict';
 
-    var appNav = {
-        bindings: {
-            user: '<',
-            onLogout: '&'
-        },
-        templateUrl: './app-nav.html'
-    };
+  var appNav = {
+    bindings: {
+      user: '<',
+      onLogout: '&',
+    },
+    templateUrl: './app-nav.html',
+  };
 
-    angular.module('common').component('appNav', appNav);
+  angular.module('common').component('appNav', appNav);
 })(angular);
