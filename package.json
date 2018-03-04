@@ -18,7 +18,13 @@
         "clean": "npm-run-all clean:*",
         "minify:vendorjs": "uglifyjs src/js/vendor.js -o src/js/vendor.min.js",
         "start": "serve --single src/",
-        "test": "karma start"
+        "start:public": "serve --single public/",
+        "test": "karma start",
+        "copy:templates": "cpx \"src/**/*.html\" \"public\"",
+        "copy:assets": "cpx \"src/**/*.{css,map,eot,ttf,woff,woff2,ico,png}\" \"public\"",
+        "copy:js": "cpx \"src/js/**/**\" \"public/js/\"",
+        "deploy": "npm-run-all --sequential copy:* deploy:*",
+        "deploy:firebase": "firebase deploy"
     },
     "repository": {
         "type": "git",
@@ -66,6 +72,7 @@
         "concat": "^1.0.3",
         "core-js": "^2.4.1",
         "coveralls": "^2.13.1",
+        "cpx": "^1.5.0",
         "fs-extra": "^5.0.0",
         "jasmine-core": "^2.7.0",
         "karma": "^1.7.0",

@@ -1,1 +1,9 @@
-{}
+{
+  "hosting": {
+    "public": "public",
+    "ignores": [
+      "**/node_modules/**",
+      "**/src/**/*.js"
+    ]
+  }
+}
