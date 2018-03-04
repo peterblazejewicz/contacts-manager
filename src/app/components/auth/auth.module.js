@@ -20,10 +20,12 @@
       '$firebaseRefProvider',
       function($firebaseRefProvider) {
         var config = {
-          apiKey: 'AIzaSyCsNISt3dFx7dy5AImIIk62jDDd0OLvZK0',
-          authDomain: 'contacts-manager-e486f.firebaseapp.com',
-          databaseURL: 'https://contacts-manager-e486f.firebaseio.com',
-          storageBucket: 'contacts-manager-e486f.appspot.com',
+          apiKey: "AIzaSyAfMsu1zzbEVoJG0Lcp8dN_JNwW1ZX5C4c",
+          authDomain: "contacts-manager-67b13.firebaseapp.com",
+          databaseURL: "https://contacts-manager-67b13.firebaseio.com",
+          projectId: "contacts-manager-67b13",
+          storageBucket: "contacts-manager-67b13.appspot.com",
+          messagingSenderId: "540166882600"
         };
 
         $firebaseRefProvider.registerUrl({
