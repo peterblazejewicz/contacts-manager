@@ -2,7 +2,7 @@
   'use strict';
 
   var register = {
-    templateUrl: './register.html',
+    templateUrl: 'app/components/auth/register.html',
     controller: 'RegisterController',
   };
 

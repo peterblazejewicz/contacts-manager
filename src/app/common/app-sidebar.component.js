@@ -2,7 +2,7 @@
   'use strict';
 
   var appSidebar = {
-    templateUrl: './app-sidebar.html',
+    templateUrl: 'app/common/app-sidebar.html',
     controller: 'AppSidebarController',
   };
 

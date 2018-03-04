@@ -2,7 +2,7 @@
   'use strict';
 
   var root = {
-    templateUrl: './root.html',
+    templateUrl: 'app/root.html',
   };
 
   angular.module('root').component('root', root);

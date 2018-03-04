@@ -5,7 +5,7 @@
     bindings: {
       contact: '<',
     },
-    templateUrl: './contact-edit.html',
+    templateUrl: 'app/components/contact/contact-edit/contact-edit.html',
     controller: 'ContactEditController',
   };
 

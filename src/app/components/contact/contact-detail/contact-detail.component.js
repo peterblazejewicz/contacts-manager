@@ -8,7 +8,7 @@
       onUpdate: '&',
       onDelete: '&',
     },
-    templateUrl: './contact-detail.html',
+    templateUrl: 'app/components/contact/contact-detail/contact-detail.html',
     controller: 'ContactDetailController',
   };
 

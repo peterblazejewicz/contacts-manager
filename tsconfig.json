@@ -15,5 +15,5 @@
         "outFile": "src/js/bundle.js"
     },
     "exclude": ["node_modules", "src/app/**/*.spec.js"],
-    "include": ["src/app/**/*.module.js", "src/app/**/*.js", "./templates.js"]
+    "include": ["src/app/**/*.module.js", "src/app/**/*.js"]
 }

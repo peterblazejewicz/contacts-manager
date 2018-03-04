@@ -6,7 +6,7 @@
       tag: '<',
       onChange: '&',
     },
-    templateUrl: './contact-tag.html',
+    templateUrl: 'app/components/contact/contact-tag/contact-tag.html',
     controller: 'ContactTagController',
   };
 

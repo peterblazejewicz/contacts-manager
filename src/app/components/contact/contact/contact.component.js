@@ -6,7 +6,7 @@
       contact: '<',
       onSelect: '&',
     },
-    templateUrl: './contact.html',
+    templateUrl: 'app/components/contact/contact/contact.html',
     controller: 'ContactController',
   };
 

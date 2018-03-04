@@ -11,6 +11,7 @@ These are the main differences to origin version:
 - source files transformation and bundling all done using *TypeScript* `tsc` cli tool
 - explicit dependency injection without using deprecated `ngAnnotate`
 - unit tests updated
+- no `templates.js` cache file. All templates loaded at runtime and cached
 
 ## Development
 

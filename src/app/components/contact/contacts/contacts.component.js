@@ -6,7 +6,7 @@
       contacts: '<',
       filter: '<',
     },
-    templateUrl: './contacts.html',
+    templateUrl: 'app/components/contact/contacts/contacts.html',
     controller: 'ContactsController',
   };
 

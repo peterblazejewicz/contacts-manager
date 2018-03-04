@@ -8,7 +8,7 @@
       message: '@',
       onSubmit: '&',
     },
-    templateUrl: './auth-form.html',
+    templateUrl: 'app/components/auth/auth-form/auth-form.html',
     controller: 'AuthFormController',
   };
 

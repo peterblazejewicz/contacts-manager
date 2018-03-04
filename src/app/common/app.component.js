@@ -2,7 +2,7 @@
   'use strict';
 
   var app = {
-    templateUrl: './app.html',
+    templateUrl: 'app/common/app.html',
     controller: 'AppController',
   };
 
