@@ -17,11 +17,6 @@ angular
     'ui.router',
     'angular-loading-bar'
   ])
-  .config(["$locationProvider", function($locationProvider) {
-    $locationProvider.html5Mode({
-        enabled: true
-    });
-  }])
   .run(function ($transitions, cfpLoadingBar) {
     $transitions.onStart({}, cfpLoadingBar.start);
     $transitions.onSuccess({}, cfpLoadingBar.complete);
