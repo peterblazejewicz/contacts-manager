@@ -2,7 +2,7 @@
   'use strict';
 
   var contactNew = {
-    templateUrl: 'app/components/contact/contact-edit/contact-new.html',
+    templateUrl: 'app/components/contact/contact-new/contact-new.html',
     controller: 'ContactNewController',
   };
 
