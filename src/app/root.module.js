@@ -1,6 +1,5 @@
-angular
-  .module('root', [
-    'common',
-    'components',
-    'templates'
-  ]);
+(function(angular) {
+    'use strict';
+
+    angular.module('root', ['common', 'components', 'templates']);
+})(angular);

@@ -1,7 +1,9 @@
-var root = {
-  templateUrl: './root.html'
-};
+(function(angular) {
+    'use strict';
 
-angular
-  .module('root')
-  .component('root', root);
+    var root = {
+        templateUrl: './root.html'
+    };
+
+    angular.module('root').component('root', root);
+})(angular);

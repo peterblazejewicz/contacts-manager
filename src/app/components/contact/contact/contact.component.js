@@ -1,12 +1,14 @@
-var contact = {
-  bindings: {
-    contact: '<',
-    onSelect: '&'
-  },
-  templateUrl: './contact.html',
-  controller: 'ContactController'
-};
+(function(angular) {
+    'use strict';
 
-angular
-  .module('components.contact')
-  .component('contact', contact);
+    var contact = {
+        bindings: {
+            contact: '<',
+            onSelect: '&'
+        },
+        templateUrl: './contact.html',
+        controller: 'ContactController'
+    };
+
+    angular.module('components.contact').component('contact', contact);
+})(angular);

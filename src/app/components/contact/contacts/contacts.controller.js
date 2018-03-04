@@ -1,17 +1,24 @@
-function ContactsController($filter, $state) {
-  var ctrl = this;
+(function(angular) {
+    'use strict';
 
-  ctrl.$onInit = function() {
-    ctrl.filteredContacts = $filter('contactsFilter')(ctrl.contacts, ctrl.filter);
-  };
+    function ContactsController($filter, $state) {
+        var ctrl = this;
 
-  ctrl.goToContact = function (event) {
-    $state.go('contact', {
-      id: event.contactId
-    });
-  };
-}
+        ctrl.$onInit = function() {
+            ctrl.filteredContacts = $filter('contactsFilter')(
+                ctrl.contacts,
+                ctrl.filter
+            );
+        };
 
-angular
-  .module('components.contact')
-  .controller('ContactsController', ContactsController);
+        ctrl.goToContact = function(event) {
+            $state.go('contact', {
+                id: event.contactId
+            });
+        };
+    }
+
+    angular
+        .module('components.contact')
+        .controller('ContactsController', ContactsController);
+})(angular);
